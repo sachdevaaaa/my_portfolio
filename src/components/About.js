@@ -71,7 +71,7 @@ const About = () => {
         {/* Right: Card Section */}
         <div className="w-full md:w-2/3 p-6 md:p-8 bg-white shadow-lg rounded-lg">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            I'm Divyam Naveen Sachdeva
+            Hi, I'm Divyam Naveen Sachdeva
           </h1>
           <p className="text-base md:text-lg text-gray-600 mb-6">
             I help growing companies like yours convert more customers and make more sales by combining your goals with your user's needs.

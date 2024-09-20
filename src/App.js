@@ -10,6 +10,7 @@ import Services from './components/Services';
 import Skills from './components/Skills';
 import ProgressBar from './components/SkateboardCharacter';
 import SkateboardCharacter from './components/SkateboardCharacter';
+import TestimonialsSection from './components/TestimonialsSection';
 
 function App() {
   return (
@@ -17,12 +18,14 @@ function App() {
    <SkateboardCharacter /> 
    <Header/>
    <Hero/>
+   < Portfolio />
    <About />
    <Services />
    
    < Skills />
    <Contact />
-   
+   <Footer />
+  
    
   </>
   )
