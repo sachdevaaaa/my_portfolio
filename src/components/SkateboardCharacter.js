@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import skateboardImage from '../images/skateboard.png'; // Adjust the path if needed
-import { WiDirectionRight } from 'react-icons/wi';
+
 
 const SkateboardCharacter = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
