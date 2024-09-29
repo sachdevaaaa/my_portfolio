@@ -47,31 +47,38 @@ const Header = () => {
       </header>
 
       {/* Mobile Menu */}
-      {isBottomNavbarVisible && ( // Show only if true
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-md bg-amber-100 text-gray-800 rounded-2xl shadow-lg py-2 md:hidden z-10">
+      {isBottomNavbarVisible && (
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-md bg-teal-100 text-gray-800 rounded-2xl shadow-lg py-2 md:hidden z-10">
           <ul className="flex justify-around items-center">
             <li className="text-center">
               <Link to="hero" smooth={true} duration={500} className="block py-1 text-sm hover:text-gray-600 flex flex-col items-center cursor-pointer">
                 <FiHome className="text-lg mb-0.5" />
-                Home
+                <span className="text-xs">Home</span>
               </Link>
             </li>
             <li className="text-center">
               <Link to="portfolio" smooth={true} duration={500} className="block py-1 text-sm hover:text-gray-600 flex flex-col items-center cursor-pointer">
                 <FiBriefcase className="text-lg mb-0.5" />
-                Portfolio
+                <span className="text-xs">Portfolio</span>
+              </Link>
+            </li>
+            {/* Logo in the center */}
+            <li className="text-center">
+              <Link to="about" smooth={true} duration={500} className="flex flex-col items-center cursor-pointer">
+                <img src={require('../images/favicon.ico')} alt="Logo" className="w-8 h-8" />
+                <span className="text-xs"></span>
               </Link>
             </li>
             <li className="text-center">
               <Link to="about" smooth={true} duration={500} className="block py-1 text-sm hover:text-gray-600 flex flex-col items-center cursor-pointer">
                 <FiUser className="text-lg mb-0.5" />
-                About
+                <span className="text-xs">About</span>
               </Link>
             </li>
             <li className="text-center">
               <Link to="contact" smooth={true} duration={500} className="block py-1 text-sm hover:text-gray-600 flex flex-col items-center cursor-pointer">
                 <FiMail className="text-lg mb-0.5" />
-                Contact Me
+                <span className="text-xs">Contact Me</span>
               </Link>
             </li>
           </ul>
