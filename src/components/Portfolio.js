@@ -27,7 +27,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden -mt-28"
+      className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden -mt-30"
       ref={containerRef}
       style={{ zIndex: 1 }} // Ensure the section is behind the navbar
     >

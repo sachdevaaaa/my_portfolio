@@ -62,7 +62,7 @@ const About = () => {
         {/* Left: Image Section */}
         <div className="w-full md:w-1/3 mb-0">
           <img
-            src={require('../images/profilepic2.png')}
+            src={require('../images/profilepic4.png')}
             alt="Divyam Naveen Sachdeva"
             className="rounded-lg object-cover w-full md:-mb-6 xs:-mb-6 -ml-6"
           />
