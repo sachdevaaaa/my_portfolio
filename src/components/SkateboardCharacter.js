@@ -32,34 +32,32 @@ const SkateboardCharacter = () => {
     };
   }, []);
 
+  // Set gaps only for mobile view
+  const isMobile = window.innerWidth <= 576; // Mobile view threshold
+
+  const leftGap = isMobile ? 58 : 0; // Gap from the left side in pixels (only for mobile)
+  const rightGap = isMobile ? 58 : 0; // Gap from the right side in pixels (only for mobile)
+
+  // Calculate the available horizontal space between gaps
+  const availableWidth = window.innerWidth - leftGap - rightGap;
+
+  // Calculate the horizontal position based on the scroll position
+  const leftPosition = leftGap + ((scrollPosition / maxScroll) * availableWidth);
+
   // Calculate rotation based on scroll position and increase rotation factor
   const rotationFactor = 7; // Increase this value to rotate more per scroll
   const rotation = (scrollPosition / maxScroll) * 360 * rotationFactor;
 
-  // Inline styles for the skateboard character
   const skateboardContainerStyle = {
     position: 'fixed',
-    top: '2.8rem', // Default position for larger screens
-    left: `${(scrollPosition / maxScroll) * 100}%`, // Move horizontally based on scroll
+    top: isMobile ? '2.9rem' : '2.8rem', // Adjust for mobile view
+    left: `${leftPosition}px`, // Constrain movement between the gaps
     transform: `translate3d(-50%, 0, 0) rotate(${rotation}deg)`, // Center the character and rotate
-    width: '1.5rem',
+    width: isMobile ? '1.1rem' : '1.5rem', // Adjust for mobile view
     height: 'auto',
     pointerEvents: 'none',
-    zIndex: 1000, // Ensure it's above other content
-    willChange: 'transform, left', // Inform the browser about upcoming changes
-  };
-
-  // Mobile view adjustment using media query
-  const mobileStyle = {
-    '@media (max-width: 576px)': {
-      top: '2.4rem',
-      width: '1.1rem', // Adjust this value as needed for mobile view
-    },
-  };
-
-  const combinedStyle = {
-    ...skateboardContainerStyle,
-    ...(window.innerWidth <= 576 ? mobileStyle['@media (max-width: 576px)'] : {}),
+    zIndex: 1000,
+    willChange: 'transform, left',
   };
 
   const skateboardImageStyle = {
@@ -69,7 +67,7 @@ const SkateboardCharacter = () => {
   };
 
   return (
-    <div ref={skateboardRef} style={combinedStyle}>
+    <div ref={skateboardRef} style={skateboardContainerStyle}>
       <img
         src={skateboardImage}
         alt="Skateboard Character"

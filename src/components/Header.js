@@ -22,7 +22,10 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-gray-800 text-white py-3 shadow-lg fixed w-full z-20">
+      <header className="bg-gray-800 text-white py-3 shadow-lg fixed z-20 left-0 right-0 mx-[50px] mt-2 rounded-xl opacity-90 max-w-[calc(100%-100px)] sm:mx-0 sm:max-w-full sm:rounded-none sm:mt-0">
+
+
+  
         <nav className="container mx-auto flex justify-between items-center px-4">
           <div className="flex items-center space-x-2 text-xl font-bold md:justify-start justify-center w-full md:w-auto">
             <img src={require('../images/favicon.ico')} alt="Logo" className="w-8 h-8 md:block" />
