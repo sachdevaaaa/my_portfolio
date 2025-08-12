@@ -42,7 +42,7 @@ const Hero = () => {
         </p>
         {/* Use Link component for smooth scrolling */}
         <Link to="contact" smooth={true} duration={500}>
-          <button className='bg-emerald-300 hover:text-black font-semibold py-3 px-8 rounded-lg mt-8'>
+          <button className='bg-emerald-300 hover:text-black font-semibold py-3 px-8 shadow-lg rounded-lg mt-8'>
             Let's Connect
           </button>
         </Link>
